@@ -40,9 +40,10 @@ func action_behavior() -> void:
 	if player.attacking and normal_attack:
 		animation.play("attack" + suffix)
 	elif player.defending and shield_off:
-		animation.play("shield")
+		animation.play("shield", -1, 0.0, true)  # Continuar enquanto o botão for pressionado
 	elif player.crouching and crouching_off:
-		animation.play("crouch")
+		animation.play("crouch", -1, 0.0, true)  # Continuar enquanto o botão for pressionad
+
 
 func vertical_behavior(direction: Vector2) -> void:
 	if direction.y > 0:
