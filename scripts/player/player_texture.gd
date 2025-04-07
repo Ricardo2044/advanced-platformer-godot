@@ -30,13 +30,13 @@ func verify_position(direction: Vector2) -> void:
 		suffix = "_left"
 
 func action_behavior() -> void:
-	if player.attacking and  normal_attack:
+	if player.attacking and normal_attack:
 		animation.play("attack" + suffix)
 		normal_attack = false
 	elif player.defending and shield_off:
 		animation.play("shield")
 		shield_off = true
-	elif player.crouching and  crouching_off:
+	elif player.crouching and crouching_off:
 		animation.play("crouch")
 		crouching_off = true
 

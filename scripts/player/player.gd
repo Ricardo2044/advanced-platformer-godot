@@ -1,6 +1,9 @@
 extends KinematicBody2D
 class_name Player
 onready var player_sprite: Sprite = get_node("Texture")
+
+# teste
+
 var velocity: Vector2 
 var jump_count: int = 0
 var landing: bool = false
